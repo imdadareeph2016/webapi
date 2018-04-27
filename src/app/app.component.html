@@ -1,0 +1,115 @@
+<div class="wrapper">
+
+  <!-- Início do header -->
+  <header class="main-header">
+  <nav class="navbar navbar-static-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand"><b>Phoenix Server</b></a>
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+          <i class="fa fa-bars"></i>
+        </button>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Restaurantes</a></li>
+            <li><a href="#apiid">Api</a></li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+
+    </div>
+  </nav>
+  </header>
+  <!-- Fim do header -->
+
+  <!-- Full Width Column -->
+  <div class="content-wrapper">
+    <div class="container">
+
+      <section class="most_popular_item_area">
+        <div>
+            <div class="s_white_title">
+                <h3>Most Popular</h3>
+                <h2>Restaurants</h2>
+            </div>
+            <div class="p_recype_item_main">
+                <div class="row p_recype_item_active">
+
+                    <!--
+                    <div class="col-md-6 break snacks">
+                        <div class="media">
+                            <div class="media-left">
+                                <img src="http://i66.tinypic.com/x6mp6p.jpg" alt="">
+                            </div>
+                            <div class="media-body">
+                                <a href="#"><h3>Vegetable Flavour</h3></a>
+                                <h4>$32</h4>
+                                <p>Lorem ipsum dolor sit amets, consectetur adipiscing </p>
+                                <a class="read_mor_btn" href="#">Add To Cart</a>
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-star-half-o"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    -->
+                    <div class="col-md-6 break snacks" *ngFor="let todo of todos">
+                        <div class="media flex-direction">
+                            <div class="media-left">
+                                <img src="http://i66.tinypic.com/x6mp6p.jpg" alt="" width="200px">
+                            </div>
+                            <div class="media-body">
+                                <a href="#"><h3>{{todo.name}}</h3></a>
+                                <h4>rating : {{todo.rating}}</h4>
+                                <p>{{todo.about}} </p>
+                                <a class="read_mor_btn" href="#">{{todo.category}}</a>
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-star-half-o"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
+         </div>
+      </section>
+
+    </div>
+  </div>
+  <div class="content-wrapper" id="apiid">
+    <div class="container">
+      <section class="most_popular_item_area">
+        <div>
+        <iframe height="500px" width="100%" src="https://my-json-server.typicode.com/imdadareeph/openapi" frameborder="0"></iframe>
+        </div>
+      </section>
+    </div>
+  </div>    
+
+  <!-- snakbar deve ser aqui  <iframe height="465px" width="470px" scrolling="no" src="https://my-json-server.typicode.com/imdadareeph/openapi" frameborder="0"></iframe> -->
+
+  <footer class="main-footer">
+    <div class="container">
+      <div class="pull-right hidden-xs">
+        <b>Version</b> 1.0.0
+      </div>
+      <strong>Phoenix Server</strong> <div class="inline text-gray"> :: Imdad Areeph</div>
+    </div>
+  </footer>
+</div>
